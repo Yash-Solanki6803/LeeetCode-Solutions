@@ -1,11 +1,8 @@
-let obj = {
-  name: 'Yash'
-}
+Array.prototype.last = function() {
+  if(this.length === 0) return -1;
+  return this[this.length-1]===null? -1 : this[this.length-1];
+};
 
-{
-  obj.name = 'yash2';
-  console.log(obj);
-}
 
-console.log(obj);
-
+ const arr = [];
+ console.log(arr.last()); // 3
