@@ -1,8 +1,3 @@
-Array.prototype.last = function() {
-  if(this.length === 0) return -1;
-  return this[this.length-1]===null? -1 : this[this.length-1];
-};
+let arr = [[1,2,3],[4,5,6]];
 
-
- const arr = [];
- console.log(arr.last()); // 3
+console.log(arr[0][1]);
