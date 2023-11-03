@@ -1,20 +1,30 @@
 var join = function (arr1, arr2) {
-  const result = {};
+  const map = new Map();
 
-  // 1. initialization
+  // 1. Initialize the Map with arr1 items
   arr1.forEach((item) => {
-    result[item.id] = item;
+    map.set(item.id, item);
   });
-  // 2. joining
+
+  // 2. Merge arr2 into the Map
   arr2.forEach((item) => {
-    if (result[item.id]) {
+    if (map.has(item.id)) {
+      const existingItem = map.get(item.id);
+      // Merge properties from arr2 into the existing item in arr1
       Object.keys(item).forEach((key) => {
-        result[item.id][key] = item[key];
+        existingItem[key] = item[key];
       });
     } else {
-      result[item.id] = item;
+      // If the id doesn't exist in arr1, add it to the Map
+      map.set(item.id, item);
     }
   });
 
-  return Object.values(result);
+  // Convert the Map values back to an array
+  const resultArray = Array.from(map.values());
+
+  // Sort the result array by the 'id' property
+  resultArray.sort((a, b) => a.id - b.id);
+
+  return resultArray;
 };
