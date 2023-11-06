@@ -1,3 +1,26 @@
+const arr1 = [
+  {
+    id: 1,
+    x: 23,
+    y: 2,
+  },
+  {
+    id: 3,
+    x: 3,
+  },
+];
+
+const arr2 = [
+  {
+    id: 1,
+    x: 3,
+  },
+  {
+    id: 2,
+    x: 2,
+  },
+];
+
 var join = function (arr1, arr2) {
   const map = new Map();
 

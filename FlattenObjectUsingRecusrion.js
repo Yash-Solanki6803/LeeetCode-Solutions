@@ -1,6 +1,7 @@
 let obj = {
   name: "zhangsan",
   age: 18,
+  q: 0,
   address: {
     city: "beijing",
     state: null,
@@ -78,7 +79,7 @@ function filterFalsyObjectValues(keysArray, obj) {
   });
 }
 
-// console.log(filterFalsyObjectValues(result, obj));
+console.log(filterFalsyObjectValues(result, obj));
 
 //Function to add a new key value pair in the object at the correct place in the nested order with is given in form of an array of keys . And the Object is also given as an array of keys .
 
@@ -127,4 +128,4 @@ function addNestedValue(obj, keys, value) {
   return obj;
 }
 
-// console.dir(addKeyValuePairs(inputKeys, obj), { depth: null });
+console.dir(addKeyValuePairs(inputKeys, obj), { depth: null });

@@ -1,7 +1,28 @@
-arr1 = [
-  { id: 1, x: 1 },
-  { id: 2, x: 9 },
-];
-arr2 = [{ id: 2, x: 5 }];
+const x = 2;
 
-console.log(Object.keys(arr1[0]));
+// global scope
+function outer() {
+  //
+  //
+  //
+  //local scope
+  //
+  //
+
+  let variable1 = 10;
+  let var2 = 20;
+  //
+  if (1) {
+    //
+    //
+    // block Scope
+    //
+  }
+  return function () {
+    console.log(variable1);
+  };
+}
+
+let a = outer();
+console.dir(a);
+a();
