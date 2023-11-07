@@ -1,28 +1,4 @@
-const x = 2;
+const list = ["January", "March", "April", "June"];
+list.splice(1, 0, 1, 2, 3, 4, 5);
 
-// global scope
-function outer() {
-  //
-  //
-  //
-  //local scope
-  //
-  //
-
-  let variable1 = 10;
-  let var2 = 20;
-  //
-  if (1) {
-    //
-    //
-    // block Scope
-    //
-  }
-  return function () {
-    console.log(variable1);
-  };
-}
-
-let a = outer();
-console.dir(a);
-a();
+console.log(list);
